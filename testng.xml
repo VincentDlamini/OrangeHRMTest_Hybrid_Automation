@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <listeners>
+        <listener class-name="utilities.ExtentReportManager"/>
+    </listeners>
+
+    <test name="OrangeHRMTest">
+        <parameter name="opSystem" value="Windows11"></parameter>
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="testCases.TC_01_LoginFunctionality"/>
+            <class name="testCases.TC_02_AddNewEmployee"/>
+            <class name="testCases.TC_03_AddPersonalDetails"/>
+            <class name="testCases.TC_04_AddEmergencyContacts"/>
+            <class name="testCases.TC_05_LogOffFunctionality"/>
+            <class name="testCases.TC_06_ForgotPassword"/>
+        </classes>
+    </test>
+
+  <!--  <test verbose="2" preserve-order="true" name="OrangeHRMAutomationTest">
+        <parameter name="opSystem" value="Windows11"></parameter>
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="testCases.TC_01_LoginFunctionality">
+                <methods>
+                    <include name="login"/>
+                </methods>
+            </class>
+            <class name="testCases.TC_02_AddNewEmployee">
+                <methods>
+                    <include name="AddNewEmployee"/>
+                </methods>
+            </class>
+            <class name="testCases.TC_03_AddPersonalDetails">
+                <methods>
+                    <include name="AddPersonalDetails"/>
+                </methods>
+            </class>
+        </classes>
+    </test>-->
+</suite>
